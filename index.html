@@ -9,59 +9,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
+                        display: ['Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
 </head>
 
-<body>
-    <main class="page">
-        <section class="hero-card">
-            <header class="hero">
-                <p class="eyebrow">Portfólio pessoal</p>
-                <h1>João Gabriel Costa Correia</h1>
-                <h2>Estudante de Análise e Desenvolvimento de Sistemas</h2>
+<body class="m-0 flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 px-4 py-6 font-sans leading-[1.7] text-slate-50">
+    <main class="w-full max-w-[900px]">
+        <section class="rounded-3xl border border-white/[0.12] bg-white/[0.08] px-[18px] py-7 text-center shadow-[0_24px_60px_rgba(2,6,23,0.35)] backdrop-blur-2xl sm:px-[30px] sm:py-10">
+            <header class="mb-5">
+                <p class="mb-2 inline-block rounded-full bg-white/[0.1] px-3 py-1.5 text-[0.8rem] uppercase tracking-[0.2em] text-gray-300">Portfólio pessoal</p>
+                <h1 class="mb-2 font-display text-[clamp(2rem,4vw,2.8rem)] font-bold text-slate-50">João Gabriel Costa Correia</h1>
+                <h2 class="text-[clamp(1.05rem,2.2vw,1.35rem)] font-semibold text-gray-300">Estudante de Análise e Desenvolvimento de Sistemas</h2>
             </header>
 
-            <img src="foto_resized.png" alt="Foto de João Gabriel" class="profile-photo">
+            <img src="foto_resized.png" alt="Foto de João Gabriel" class="mx-0 my-6 h-[150px] w-[150px] rounded-full border-4 border-white/[0.22] object-cover shadow-[0_16px_35px_rgba(15,23,42,0.35)] sm:h-[180px] sm:w-[180px]">
 
-            <p class="intro">
+            <p class="mx-auto my-6 max-w-[720px] rounded-2xl bg-white/[0.06] px-[22px] py-[18px] text-justify text-gray-300">
                 Meu nome é <strong>João Gabriel</strong>, sou estudante e estou cursando análise e desenvolvimento de sistemas e também já sou técnico em informatica, atualmente estou locado no Instituto Forza.
                 Além disso, estudo por fora no Curso em Vídeo, uma plataforma que tem me ajudado bastante.
                 Estou em busca de me tornar um programador <em>front-end</em> e estudo todos os dias. Este é o meu primeiro projeto pequeno e solo.
             </p>
 
-            <div class="divider"></div>
+            <div class="my-7 h-px w-full bg-gradient-to-r from-transparent via-white/[0.35] to-transparent"></div>
 
-            <section class="links-section">
-                <h3>entre em contato comigo!</h3>
-                <ul class="links-list">
-                    <li>
-                        <a href="https://www.instagram.com/jo7_gbrl/" target="_blank">Instagram</a>
-                        <span>Uso para interações e conteúdos diversos.</span>
+            <section>
+                <h3 class="mb-4 text-[1.1rem] font-semibold text-gray-300">entre em contato comigo!</h3>
+                <ul class="mx-auto grid max-w-[680px] list-none gap-3 p-0">
+                    <li class="flex flex-col items-start gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.05] px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
+                        <a href="https://www.instagram.com/jo7_gbrl/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-white/[0.1] px-3.5 py-2 font-semibold text-slate-50 no-underline transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.18]">Instagram</a>
+                        <span class="flex-[1_1_220px] text-left text-[0.95rem] text-gray-400">Uso para interações e conteúdos diversos.</span>
                     </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-costa-correia-a254a7406/" target="_blank">LinkedIn</a>
-                        <span>Perfil profissional e acadêmico.</span>
+                    <li class="flex flex-col items-start gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.05] px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-costa-correia-a254a7406/" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-white/[0.1] px-3.5 py-2 font-semibold text-slate-50 no-underline transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.18]">LinkedIn</a>
+                        <span class="flex-[1_1_220px] text-left text-[0.95rem] text-gray-400">Perfil profissional e acadêmico.</span>
                     </li>
-                    <li>
-                        <a href="https://github.com/Gabriel-DevFront-00?tab=repositories" target="_blank">GitHub</a>
-                        <span>Meus repositórios e projetos.</span>
+                    <li class="flex flex-col items-start gap-3 rounded-[14px] border border-white/[0.08] bg-white/[0.05] px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
+                        <a href="https://github.com/Gabriel-DevFront-00?tab=repositories" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-white/[0.1] px-3.5 py-2 font-semibold text-slate-50 no-underline transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.18]">GitHub</a>
+                        <span class="flex-[1_1_220px] text-left text-[0.95rem] text-gray-400">Meus repositórios e projetos.</span>
                     </li>
                 </ul>
             </section>
 
-            <div class="divider"></div>
+            <div class="my-7 h-px w-full bg-gradient-to-r from-transparent via-white/[0.35] to-transparent"></div>
 
-            <section class="documents">
-                <p>
-                    Acesse meu <a href="diploma.pdf" target="_blank">diploma</a>  <br>acesse meu <a href="Currículo pessoal João Gabriel.pdf" target="_blank">currículo</a>.
+            <section>
+                <p class="mx-auto my-6 max-w-[720px] rounded-2xl bg-white/[0.06] px-[22px] py-[18px] text-gray-300">
+                    Acesse meu <a href="diploma.pdf" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-white/[0.1] px-3.5 py-2 font-semibold text-slate-50 no-underline transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.18]">diploma</a><br>acesse meu <a href="Currículo pessoal João Gabriel.pdf" target="_blank" rel="noopener noreferrer" class="inline-block rounded-full bg-white/[0.1] px-3.5 py-2 font-semibold text-slate-50 no-underline transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.18]">currículo</a>.
                 </p>
             </section>
         </section>
     </main>
 
-    <footer>
+    <footer class="mt-5 px-0 pt-2.5 text-[0.9rem] text-gray-400">
         © 2026 - João Gabriel Costa Correia todos os direitos reservados
     </footer>
 </body>
 </html>
-
